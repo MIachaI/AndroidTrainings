@@ -1,7 +1,6 @@
 import android.graphics.Bitmap
 import controller.engineController
-import java.io.File
-import java.io.IOException
+
 
 
 /**
@@ -19,7 +18,7 @@ class Drawing {
                 val green = (Math.random() * 256).toInt() //green
                 val blue = (Math.random() * 256).toInt() //blue
 
-                val pixel = alpha shl 24 or (red shl 16) or (green shl 8) or blue
+                val pixel = 255 shl 24 or (red shl 16) or (green shl 8) or blue
                 arrayOfColors[i]=pixel
             }
             arrayOfColors[0] = 0 shl 24 or (0 shl 16) or (0 shl 8) or 0
@@ -27,7 +26,7 @@ class Drawing {
         }
 
         fun drawArray(): Bitmap {
-            val img = Bitmap.createBitmap(200,200,Bitmap.Config.ARGB_8888)
+            val img = Bitmap.createBitmap(engineController.xSize,engineController.ySize,Bitmap.Config.ARGB_8888)
             for (i in 1..engineController.xSize - 2) {
                 for (j in 1..engineController.ySize - 2) {
                     if(engineController.arrayToWorkOn[i][j].cellState=="inclusion"){img.setPixel(i,j,0)}

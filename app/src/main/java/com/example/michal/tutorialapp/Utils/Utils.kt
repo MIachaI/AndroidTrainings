@@ -1,7 +1,11 @@
+import android.view.View
+import android.widget.ImageView
 import app.Cell
 import app.Moore
 import com.example.michal.tutorialapp.MainActivity
+import com.example.michal.tutorialapp.R
 import controller.engineController
+import kotlinx.android.synthetic.main.activity_main.*
 import java.io.File
 import java.io.InputStream
 import java.util.*
@@ -214,14 +218,13 @@ class Utils{
                         }
                     }
                 }
-
                 for (i in 1..xSize-2){
                     for (j in 1..ySize-2){
                         engineController.arrayToWorkOn[i][j].cellPreviousState = engineController.arrayToWorkOn[i][j].cellState
                     }
                     println(buffer)
                 }
-                //Drawing.drawArray()
+
                 if(buffer==0) {
                     engineController.arrayToWorkOn=array
                     return
