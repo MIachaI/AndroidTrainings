@@ -1,14 +1,10 @@
 package com.example.michal.tutorialapp
 
-import android.graphics.Bitmap
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.ImageView
-import kotlinx.android.synthetic.main.activity_main.*
-import app.Cell
-
-import controller.engineController
+import android.widget.Button
+import android.widget.TextView
+import com.example.michal.tutorialapp.Utils.Counter
 
 
 class MainActivity : AppCompatActivity() {
@@ -16,25 +12,32 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        imageToShow.setImageBitmap(engineController.image)
-       button.setOnClickListener{
-           engineController.ySize = ySize.text.toString().toInt()
-           engineController.xSize = xSize.text.toString().toInt()
-           engineController.nucleonsNumber = nucleonsNumber.text.toString().toInt()
-           engineController.arrayToWorkOn = Array(engineController.xSize, { Array(engineController.ySize, { Cell(0, 0, "empty", "empty", 0, false) })})
-           updateImage()
-           Utils.setGrainsInArray()
-           Drawing.setColors()
-           println("gcolors set")
-           Utils.grainGrow()
-           println("grains grow")
-           imageToShow.setImageBitmap(Drawing.drawArray())
-           println("drawing done")
+        val playerOnePoints = findViewById<TextView>(R.id.textView1)
+        val playerOneMinusOneButton = findViewById<Button>(R.id.button1)
+        playerOneMinusOneButton.setOnClickListener {
+            Counter.changePointsOnPlayerOne(-1)
+            playerOnePoints.text = Counter.PlayerOnePoints.toString()
+        }
+        val playerOneMinusFiveButton = findViewById<Button>(R.id.button2)
+        playerOneMinusFiveButton.setOnClickListener {
+            Counter.changePointsOnPlayerOne(-5)
+            playerOnePoints.text = Counter.PlayerOnePoints.toString()
+        }
+        val playerOnePlusOneButton = findViewById<Button>(R.id.button3)
+        playerOnePlusOneButton.setOnClickListener {
+            Counter.changePointsOnPlayerOne(1)
+            playerOnePoints.text = Counter.PlayerOnePoints.toString()
+        }
+        val playerOnePlusFiveButton = findViewById<Button>(R.id.button4)
+        playerOnePlusFiveButton.setOnClickListener {
+            Counter.changePointsOnPlayerOne(5)
+            playerOnePoints.text = Counter.PlayerOnePoints.toString()
+        }
+
+
        }
    }
 
-    fun updateImage() {
-        runOnUiThread { imageToShow.setImageBitmap(engineController.image) }
-    }
-}
+
+
 
