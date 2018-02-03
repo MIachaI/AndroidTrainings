@@ -15,24 +15,117 @@ class MainActivity : AppCompatActivity() {
         val playerOnePoints = findViewById<TextView>(R.id.textView1)
         val playerOneMinusOneButton = findViewById<Button>(R.id.button1)
         playerOneMinusOneButton.setOnClickListener {
-            Counter.changePointsOnPlayerOne(-1)
+            Counter.changePoints(1,-1)
             playerOnePoints.text = Counter.PlayerOnePoints.toString()
         }
         val playerOneMinusFiveButton = findViewById<Button>(R.id.button2)
         playerOneMinusFiveButton.setOnClickListener {
-            Counter.changePointsOnPlayerOne(-5)
+            Counter.changePoints(1,-5)
             playerOnePoints.text = Counter.PlayerOnePoints.toString()
         }
         val playerOnePlusOneButton = findViewById<Button>(R.id.button3)
         playerOnePlusOneButton.setOnClickListener {
-            Counter.changePointsOnPlayerOne(1)
+            Counter.changePoints(1,1)
             playerOnePoints.text = Counter.PlayerOnePoints.toString()
         }
         val playerOnePlusFiveButton = findViewById<Button>(R.id.button4)
         playerOnePlusFiveButton.setOnClickListener {
-            Counter.changePointsOnPlayerOne(5)
+            Counter.changePoints(1,5)
             playerOnePoints.text = Counter.PlayerOnePoints.toString()
-        }
+
+
+
+            val playerOnePoints = findViewById<TextView>(R.id.textView1)
+            val playerOneMinusOneButton = findViewById<Button>(R.id.button1)
+            playerOneMinusOneButton.setOnClickListener {
+                Counter.changePoints(1,-1)
+                playerOnePoints.text = Counter.PlayerOnePoints.toString()
+            }
+            val playerOneMinusFiveButton = findViewById<Button>(R.id.button2)
+            playerOneMinusFiveButton.setOnClickListener {
+                Counter.changePoints(1,-5)
+                playerOnePoints.text = Counter.PlayerOnePoints.toString()
+            }
+            val playerOnePlusOneButton = findViewById<Button>(R.id.button3)
+            playerOnePlusOneButton.setOnClickListener {
+                Counter.changePoints(1,1)
+                playerOnePoints.text = Counter.PlayerOnePoints.toString()
+            }
+            val playerOnePlusFiveButton = findViewById<Button>(R.id.button4)
+            playerOnePlusFiveButton.setOnClickListener {
+                Counter.changePoints(1,5)
+                playerOnePoints.text = Counter.PlayerOnePoints.toString()
+            }
+
+
+            val playerOnePoints = findViewById<TextView>(R.id.textView1)
+            val playerOneMinusOneButton = findViewById<Button>(R.id.button1)
+            playerOneMinusOneButton.setOnClickListener {
+                Counter.changePoints(1,-1)
+                playerOnePoints.text = Counter.PlayerOnePoints.toString()
+            }
+            val playerOneMinusFiveButton = findViewById<Button>(R.id.button2)
+            playerOneMinusFiveButton.setOnClickListener {
+                Counter.changePoints(1,-5)
+                playerOnePoints.text = Counter.PlayerOnePoints.toString()
+            }
+            val playerOnePlusOneButton = findViewById<Button>(R.id.button3)
+            playerOnePlusOneButton.setOnClickListener {
+                Counter.changePoints(1,1)
+                playerOnePoints.text = Counter.PlayerOnePoints.toString()
+            }
+            val playerOnePlusFiveButton = findViewById<Button>(R.id.button4)
+            playerOnePlusFiveButton.setOnClickListener {
+                Counter.changePoints(1,5)
+                playerOnePoints.text = Counter.PlayerOnePoints.toString()
+            }
+
+
+
+            val playerOnePoints = findViewById<TextView>(R.id.textView1)
+            val playerOneMinusOneButton = findViewById<Button>(R.id.button1)
+            playerOneMinusOneButton.setOnClickListener {
+                Counter.changePoints(1,-1)
+                playerOnePoints.text = Counter.PlayerOnePoints.toString()
+            }
+            val playerOneMinusFiveButton = findViewById<Button>(R.id.button2)
+            playerOneMinusFiveButton.setOnClickListener {
+                Counter.changePoints(1,-5)
+                playerOnePoints.text = Counter.PlayerOnePoints.toString()
+            }
+            val playerOnePlusOneButton = findViewById<Button>(R.id.button3)
+            playerOnePlusOneButton.setOnClickListener {
+                Counter.changePoints(1,1)
+                playerOnePoints.text = Counter.PlayerOnePoints.toString()
+            }
+            val playerOnePlusFiveButton = findViewById<Button>(R.id.button4)
+            playerOnePlusFiveButton.setOnClickListener {
+                Counter.changePoints(1,5)
+                playerOnePoints.text = Counter.PlayerOnePoints.toString()
+            }
+
+
+            val playerOnePoints = findViewById<TextView>(R.id.textView1)
+            val playerOneMinusOneButton = findViewById<Button>(R.id.button1)
+            playerOneMinusOneButton.setOnClickListener {
+                Counter.changePoints(1,-1)
+                playerOnePoints.text = Counter.PlayerOnePoints.toString()
+            }
+            val playerOneMinusFiveButton = findViewById<Button>(R.id.button2)
+            playerOneMinusFiveButton.setOnClickListener {
+                Counter.changePoints(1,-5)
+                playerOnePoints.text = Counter.PlayerOnePoints.toString()
+            }
+            val playerOnePlusOneButton = findViewById<Button>(R.id.button3)
+            playerOnePlusOneButton.setOnClickListener {
+                Counter.changePoints(1,1)
+                playerOnePoints.text = Counter.PlayerOnePoints.toString()
+            }
+            val playerOnePlusFiveButton = findViewById<Button>(R.id.button4)
+            playerOnePlusFiveButton.setOnClickListener {
+                Counter.changePoints(1,5)
+                playerOnePoints.text = Counter.PlayerOnePoints.toString()
+            }
 
 
        }
