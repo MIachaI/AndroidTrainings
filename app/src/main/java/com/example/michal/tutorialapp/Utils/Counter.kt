@@ -1,5 +1,6 @@
 package com.example.michal.tutorialapp.Utils
 
+import android.util.Log
 import android.widget.TextView
 import com.example.michal.tutorialapp.MainActivity
 import com.example.michal.tutorialapp.R
@@ -7,7 +8,7 @@ import com.example.michal.tutorialapp.R
 /**
  * Created by Michal on 19.01.2018.
  */
-public class Counter{
+class Counter{
     companion object {
         var PlayerOnePoints = 0
         var PlayerTwoPoints = 0
@@ -18,13 +19,29 @@ public class Counter{
         fun changePoints(player: Int, points: Int){
             if (player==1){
                 PlayerOnePoints+=points
+                print("1")
+                Log.d("ok?","1")
             }
-        }
-
-        fun buttonAction(player: Int, points: Int){
-
-            val playerOnePoints = MainActivity.findViewById<TextView>(R.id.textView1)
-
+            if(player==2){
+                PlayerTwoPoints+=points
+                print("2")
+                Log.d("ok?","2")
+            }
+            if(player==3){
+                PlayerThreePoints+=points
+                print("3")
+                Log.d("ok?","3")
+            }
+            if(player==4){
+                PlayerFourPoints+=points
+                print("4")
+                Log.d("ok?","4")
+            }
+            if(player==5){
+                PlayerFivePoints+=points
+                print("5")
+                Log.d("ok?","5")
+            }
         }
     }
 
